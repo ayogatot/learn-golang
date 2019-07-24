@@ -27,4 +27,15 @@ func main() {
 	// type inference to declare multiple variable
 	thisNumber, thisString, thisBool, thisFloat := 1, "Ini String", true, 2.2
 	fmt.Println(thisNumber, thisString, thisBool, thisFloat)
+
+	// predefined variable (_)
+	_ = "Ini variable sampah katanya"
+
+	// declare variable using new
+	iniString := new(string)
+	// pointer string to showing memory address
+	fmt.Println(iniString)
+	// to show the true form of iniString
+	fmt.Println(*iniString)
+
 }
