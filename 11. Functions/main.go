@@ -31,6 +31,16 @@ func main() {
 	fmt.Printf("\nluas lingkaran\t\t: %.2f \n", area2)
 	fmt.Printf("keliling lingkaran\t: %.2f \n", circumference2)
 
+	var avg = total(2, 4, 3, 5, 4, 3, 3, 5, 5, 3)
+	var msg = fmt.Sprintf("Rata-rata : %.2f", avg)
+	fmt.Println(msg)
+
+	// fill variadic functions with slice
+	var number = []int{2, 3, 1, 3, 4, 3, 4, 1, 3, 4, 2}
+	avg = total(number...)
+	msg = fmt.Sprintf("Rata-rata : %.2f", avg)
+	fmt.Println(msg)
+
 	fmt.Println("\n============== Function ==============")
 
 }
@@ -68,9 +78,24 @@ func calculate(d float64) (float64, float64) {
 	return area, circumference
 }
 
+// Function with output is defined
 func calculated(d float64) (circumference, area float64) {
 	area = math.Phi * math.Pow(d/2, 2)
 	circumference = math.Phi * d
 
 	return
+}
+
+// Variadic Function
+// Unlimited parameter using (...)
+func total(number ...int) float64 {
+	total := 0
+
+	for _, tot := range number {
+		total += tot
+	}
+
+	var avg = float64(total) / float64(len(number))
+	return avg
+
 }
