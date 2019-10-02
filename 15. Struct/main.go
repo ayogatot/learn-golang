@@ -20,10 +20,15 @@ Kita sepakati dalam buku ini, variabel tersebut dipanggil dengan istilah object 
 */
 
 func main() {
-	var s1 student
-	s1.name = "john wick"
+	var s1 = student{}
+	s1.name = "wick"
 	s1.grade = 2
 
-	fmt.Println("name  :", s1.name)
-	fmt.Println("grade :", s1.grade)
+	var s2 = student{"ethan", 2}
+
+	var s3 = student{name: "jason"}
+
+	fmt.Println("student 1 :", s1.name)
+	fmt.Println("student 2 :", s2.name)
+	fmt.Println("student 3 :", s3.name)
 }
