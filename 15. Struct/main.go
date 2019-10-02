@@ -2,7 +2,13 @@ package main
 
 import "fmt"
 
+type person struct {
+	name string
+	age  int
+}
+
 type student struct {
+	person
 	name  string
 	grade int
 }
@@ -24,12 +30,19 @@ func main() {
 	s1.name = "wick"
 	s1.grade = 2
 
-	var s2 = student{"ethan", 2}
+	var p1 = person{name: "wick", age: 21}
+	var s2 = student{person: p1, grade: 2}
+
+	/*
+		Struct person di-embed ke dalam struct student, dan kedua struct tersebut kebetulan salah satu nama property-nya ada yg sama, yaitu age.
+		Cara mengakses property age milik struct person lewat objek struct student, adalah dengan menuliskan nama struct yg di-embed kemudian nama property-nya,
+		contohnya: s1.person.age = 22.
+	*/
 
 	var s3 = student{name: "jason"}
 
 	fmt.Println("student 1 :", s1.name)
-	fmt.Println("student 2 :", s2.name)
+	fmt.Println("student 2 :", s2.person.name)
 	fmt.Println("student 3 :", s3.name)
 
 	/*
