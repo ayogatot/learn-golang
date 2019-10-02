@@ -37,4 +37,18 @@ func main() {
 		2. Deklarasi s2 = sama dengan s1, namun langsung mengisi property-nya pada saat pembuatan variable
 		2. Deklarasi s3 = sama dengan s2, namun hanya mengisi 1 property saya, cara ini efektif ketika membuat struct namun tidak semua property harus memiliki nilai
 	*/
+
+	var s4 = student{name: "wayne", grade: 2}
+	var s5 = student{grade: 2, name: "bruce"}
+
+	// Kita juga bisa mendeklarasi struct dengan mengisi property-nya secara tidak urut
+
+	fmt.Println("student 1 :", s4.name)
+	fmt.Println("student 1 :", s5.name)
+
+	// Variable object Pointer
+	var s6 *student = &s1
+
+	fmt.Println("student 1 :", s6.name)
+
 }
