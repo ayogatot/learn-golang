@@ -31,4 +31,10 @@ func main() {
 	fmt.Println("student 1 :", s1.name)
 	fmt.Println("student 2 :", s2.name)
 	fmt.Println("student 3 :", s3.name)
+
+	/*
+		1. Deklarasi s1 = manampung object student di variable s1, dan menambahkan property nya dibawahnya.
+		2. Deklarasi s2 = sama dengan s1, namun langsung mengisi property-nya pada saat pembuatan variable
+		2. Deklarasi s3 = sama dengan s2, namun hanya mengisi 1 property saya, cara ini efektif ketika membuat struct namun tidak semua property harus memiliki nilai
+	*/
 }
