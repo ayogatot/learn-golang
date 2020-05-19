@@ -14,8 +14,11 @@ func main() {
 	fmt.Println("Number2 :", i, j)
 
 	// using := to replace var
+	// Type Inference = method of declaring variable which data type is determined by the value
 	k := "OH YEAH"
+	k2 := 12
 	fmt.Println(k)
+	fmt.Println(k2)
 
 	// declaring variable using block
 	var (
@@ -29,6 +32,7 @@ func main() {
 	fmt.Println(thisNumber, thisString, thisBool, thisFloat)
 
 	// predefined variable (_)
+	// cannot be used, usually used on callback params that we doesn't need
 	_ = "Ini variable sampah katanya"
 
 	// declare variable using new
