@@ -60,6 +60,11 @@ func main() {
 		fmt.Printf("Isi Array3 : %s\n", item)
 	}
 
+	// If only indeks needed :
+	// for i, _ := range Array3 {}
+	// or
+	// for i := range Array3 {}
+
 	fmt.Println("\n============== Array ==============")
 
 }

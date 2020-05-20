@@ -1,10 +1,9 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
+
 	fmt.Println("============== Slice ==============")
 	fmt.Printf("\n")
 	// Slice is array reference
@@ -76,6 +75,10 @@ func main() {
 	fmt.Printf("Variable2 => %s\n", variable2)
 	fmt.Printf("Variable1 => %s\n", variable1)
 	fmt.Printf("Cap => %d\n", cap(variable1))
+
+	for _, item := range fruits {
+		fmt.Println(item)
+	}
 
 	fmt.Printf("\n")
 	fmt.Println("============== Slice ==============")
