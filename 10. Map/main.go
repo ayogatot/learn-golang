@@ -1,8 +1,6 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
 	fmt.Println("============== Map ==============")
@@ -51,6 +49,7 @@ func main() {
 	// zero value of int is 0
 
 	// detect the key is exist or nay
+	// using second variable to detect (bool)
 	value, isExist := thisMonth["mei"]
 	if isExist {
 		fmt.Printf("%d\n", value)
@@ -61,12 +60,22 @@ func main() {
 	// Combination of map and slice is like an array of object in javascript
 	// example :
 	animals := []map[string]string{
-		map[string]string{"jenis": "singo", "name": "michael"},
-		map[string]string{"jenis": "iwak", "name": "iwak-ka"},
+		{"jenis": "singo", "name": "michael"},
+		{"jenis": "iwak", "name": "iwak-ka"},
 	}
 	for _, animal := range animals {
 		fmt.Println("Key :", animal["jenis"], "Value :", animal["name"])
 	}
+
+	// Using different type of value
+	pokemon := map[string]interface{}{}
+	pokemon["name"] = "charizard"
+	pokemon["weight"] = 10
+
+	digimon := map[string]interface{}{"name": "Agumon", "isEvolve": true}
+
+	fmt.Println(digimon["name"])
+	fmt.Println(pokemon["name"])
 
 	fmt.Println("\n============== Map ==============")
 }
